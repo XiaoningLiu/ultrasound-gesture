@@ -1,5 +1,8 @@
 #include <iostream>
 #include "Recorder.h"
+#include "Sounder.h"
+#include "Fourier.h"
+
 
 using namespace std;
 
@@ -27,7 +30,9 @@ BOOL Process(void* lpData, LPWAVEHDR pwh)
 
 int main() {
 	Recorder m_rec;
+	Sounder m_sounder(1000);//1000Hz
 
+	m_sounder.start();
 
 	m_rec.Open();
 	m_rec.SetBufferFunction(NULL,Process);
