@@ -17,9 +17,21 @@
     <ClInclude Include="Recorder.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Fourier.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sounder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Recorder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Fourier.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sounder.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
