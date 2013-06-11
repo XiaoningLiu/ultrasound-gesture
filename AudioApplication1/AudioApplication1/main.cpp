@@ -30,7 +30,10 @@ BOOL Process(void* lpData, LPWAVEHDR pwh)
 		{
 			double value = (double)((short*)pwh->lpData)[dw++];
 			fftin[nCount++] = value;
+
+			//if( value > 1000)cout<<value<<endl;
 		}
+		
 	}
 	
 	/***  Perform FFT  ***/
@@ -61,7 +64,7 @@ BOOL Process(void* lpData, LPWAVEHDR pwh)
 	 *  The next step to do is to calculate the difference of fft_db ACCURATELY
 	 */
 
-	if(fft_db[488] >=102 || fft_db[487] >= 102)
+	if(fft_db[464] >=104 || fft_db[465] >= 104)
 	{
 		mouse_event(MOUSEEVENTF_LEFTDOWN,0,0,0,0);
 		mouse_event(MOUSEEVENTF_LEFTUP,0,0,0,0);
@@ -76,9 +79,9 @@ int main() {
 	/*  NOTE: The next step is to include our sounder into this project.
 	 */
 
-	//Sounder m_sounder(1000);//1000Hz
+	Sounder m_sounder(20000);//1000Hz
 
-	//m_sounder.start();
+	m_sounder.start();
 
 	m_rec.Open();
 	m_rec.SetBufferFunction(NULL,Process);

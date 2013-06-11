@@ -1,7 +1,7 @@
 #include <Windows.h>
 #include "Sounder.h"
 
-const int DURATION = 5000;//10 min
+const int DURATION = 50000;//10 min
 
 Sounder::Sounder(int theFrequency)
 {
